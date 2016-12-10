@@ -1,0 +1,79 @@
+body {
+    width: 700px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, select, button, textarea {
+    display: block;
+    width: 100%;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+table button {
+    width: 33%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.columna-doble {
+    display: inline-block;
+    width: 49%;
+}
+
+.amaga {
+    display: none;
+}
+
+.buit {
+    text-align: center;
+    font-style: italic;
+}
+
+#notificacions {
+    border: 0;
+    padding: 5px;
+}
+
+#notificacions.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    border-color: #D8000C;
+    border: 1px solid;
+}
+
+#notificacions.info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    border-color: #00529B;
+    border: 1px solid;
+}
+
+#notificacions.exit {
+    color: #4f8A10;
+    background-color: #DFF2BF;
+    border-color: #4f8A10;
+    border: 1px solid;
+}
+
+#notificacions.alerta {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    border-color: #9F6000;
+    border: 1px solid;
+}
+

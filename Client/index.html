@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor d'esdeveniments</title>
+    <link rel="stylesheet" type="text/css" href="css/principal.css">
+</head>
+<body>
+
+<header>
+    <h1>Gestor d'esdeveniments</h1>
+    <div id="notificacions"></div>
+</header>
+
+<main>
+    <div id="paginaLlistat">
+        <h2>Llistat d'esdeveniments</h2>
+
+        <input class="columna-doble" type="text"
+               placeholder="Introdueix una paraula o deixa-ho buit per eliminar el filtre"
+               name="filtre"/>
+        <button class="columna-doble" data-accio="filtrar">Filtrar</button>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Data</th>
+                <th>Organitzador</th>
+                <th>Accions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="4" class="buit">No s'ha trobat cap esdeveniment</td>
+            </tr>
+            </tbody>
+        </table>
+        <button data-accio="mostrar-alta">Afegir nou esdeveniment</button>
+    </div>
+
+    <div id="paginaAlta" class="amaga">
+        <h2>Alta d'esdeveniment</h2>
+        <form id="formulariAlta">
+            <label>Nom</label>
+            <input type="text" name="nom" placeholder="Nom de l'esdeveniment..." required/>
+
+            <label>Descripció</label>
+            <textarea name="descripcio" placeholder="Descripció de l'esdeveniment..."></textarea>
+
+            <label>Data</label>
+            <input type="date" name="data"/>
+
+            <label>Organitzador</label>
+            <select name="organitzador">
+                <option value="Ajuntament de Barcelona" selected>Ajuntament de Barcelona</option>
+                <option value="Associació Cultural">Associació Cultural</option>
+                <option value="Associació de Botiguers">Associació de Botiguers</option>
+                <option value="Organitzador privat">Organitzador privat</option>
+            </select>
+            <button class="columna-doble" data-accio="alta">Alta</button>
+            <button class="columna-doble" data-accio="mostrar-llistat">Tornar al llistat</button>
+        </form>
+    </div>
+
+    <div id="paginaActualitzar" class="amaga">
+        <h2>Modificació d'esdeveniment</h2>
+        <form id="formulariActualitzar">
+            <label>Nom</label>
+            <input type="text" name="nom" placeholder="Nom de l'esdeveniment..." required/>
+
+            <label>Descripció</label>
+            <textarea name="descripcio" placeholder="Descripció de l'esdeveniment..."></textarea>
+
+            <label>Data</label>
+            <input type="date" name="data"/>
+
+            <label>Organitzador</label>
+            <select name="organitzador">
+                <option selected>Ajuntament de Barcelona</option>
+                <option>Associació Cultural</option>
+                <option>Associació de Botiguers</option>
+                <option>Organitzador privat</option>
+            </select>
+            <button class="columna-doble" data-accio="actualitzar">Actualitzar</button>
+            <button class="columna-doble" data-accio="mostrar-llistat">Tornar al llistat</button>
+        </form>
+    </div>
+
+    <div id="paginaDetall" class="amaga">
+        <h2>Detall d'esdeveniment</h2>
+        <div>
+            <label>Nom</label>
+            <span id="detallNom">xx</span>
+            <label>Descripció</label>
+            <span id="detallDescripcio">xx</span>
+            <label>Data</label>
+            <span id="detallData">xx</span>
+            <label>Organitzador</label>
+            <span id="detallOrganitzador">xx</span>
+        </div>
+        <button class="columna-doble" data-accio="mostrar-actualitzar">Actualitzar</button>
+        <button class="columna-doble" data-accio="mostrar-llistat">Tornar al llistat</button>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/gestor-esdeveniments.js"></script>
+</body>
+</html>
